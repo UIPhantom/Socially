@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <title><%=title%></title>
+</head>
+<body>
+    <header>
+        <%- include("./header.ejs") %>
+    </header>
+    <main>
+        <section>
+            <div class="left">
+                <img src="/background/backgound.jpg" alt="background.jpg">
+            </div>
+            <div class="box"></div>
+            <div class="right">
+                <form action="/signup" method="post">
+                    <div class="signup-logo">
+                        <img src="/logo/signup.png" alt="">
+                    </div>
+                    <div class="form-fields">
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                    <label for="password">Password</label>
+                    <input type="password" name="password">
+                    <label for="confirm">Confirm Password</label>
+                    <input type="password" name="confirm">
+                    <label for="gender">Gender</label>
+                    <select name="gender">
+                        <option value="" hidden>Select a gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <button class="signup" type="submit"><i class="fa-solid fa-user-plus btn-icon"> Sign Up</i></button>
+                </div>
+                   
+                </form>
+                <div class="last">
+                    <p>Already have an account?</p>
+                        <a class="btn-signin" href="/signin"><i class="fa-solid fa-right-to-bracket btn-icon"> Sign In</i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include("./footer.ejs") %>
+</body>
+</html>

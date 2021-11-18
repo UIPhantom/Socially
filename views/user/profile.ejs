@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/profile.css">
+    <title><%=title%></title>
+</head>
+<body>
+    <header>
+        <%-include("../header")%>
+        <div class="profile-head">
+            <div class="avatar">
+                <img src="/avatar/test.jpg" alt="">
+            </div>
+            <div class="space">
+
+            </div>
+            <div class="logout-button">
+                <a href="/signout"><i class="fa-solid fa-power-off"></i></a>
+            </div>
+        </div>
+    </header>
+    <main class="section">
+        <section class="profile-border">
+            <div class="profile-img">
+                <img src="/avatar/test.jpg" alt="">
+            </div>
+        </section>
+        <section class="profile-details">
+            
+        </section>
+    </main>
+    <footer>
+        <%-include("../footer")%>
+    </footer>
+</body>
+</html>

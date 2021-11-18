@@ -1,0 +1,56 @@
+body{
+    margin: 0px;
+
+}
+.space{
+    width: 50px;
+}
+
+.button{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    width: 30%;
+    height: 4.5rem;
+    flex-direction: row;
+    left: 65%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-signin{
+    height: 45%;
+    width: 100%;
+    background-color: turquoise;
+    text-decoration: none;
+    color: #000;
+    border-radius: 20px;
+    cursor: default;
+}
+.btn-signup{
+    height: 45%;
+    width: 100%;
+    background-color: rgb(96, 224, 96);
+    text-decoration: none;
+    color: #000;
+    border-radius: 20px;
+    cursor: default;
+}
+.btn-signup:hover{
+    box-shadow: 0px 0px 3px 3px rgb(154, 233, 154);
+    transition: ease-out 0.5s;
+    
+}
+.btn-signin:hover{
+    box-shadow: 0px 0px 3px 3px rgb(155, 236, 229);
+    transition: ease-out 0.5s;
+    
+}
+.btn-icon{
+    margin-top: 7px;
+    font-size: 15px;
+}
+.background-image img{
+    height: 90%;
+    width: 100%;
+}

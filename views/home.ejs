@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <header>        
+            <%-include("./header.ejs")%>
+            <div class="button">
+                <a class="btn-signin" href="/signin"><i class="fa-solid fa-right-to-bracket btn-icon"> Sign In</i></a>
+                <div class="space"></div>
+                <a class="btn-signup" href="/signup"><i class="fa-solid fa-user-plus btn-icon"> Sign Up</i></a>
+            </div>
+    </header>
+    <main>
+        <div class="background-image">
+            <img src="/background/backgound.jpg" alt="backgound.jpg">
+        </div>
+    </main>
+    <footer>
+        <%-include("./footer.ejs")%>
+    </footer>
+</body>
+</html>
