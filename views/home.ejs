@@ -10,19 +10,36 @@
 <body>
     <header>        
             <%-include("./header.ejs")%>
-            <div class="button">
-                <a class="btn-signin" href="/signin"><i class="fa-solid fa-right-to-bracket btn-icon"> Sign In</i></a>
-                <div class="space"></div>
-                <a class="btn-signup" href="/signup"><i class="fa-solid fa-user-plus btn-icon"> Sign Up</i></a>
-            </div>
     </header>
     <main>
-        <div class="background-image">
-            <img src="/background/backgound.jpg" alt="backgound.jpg">
+        <div class="signin">
+            <div class="form-layout">
+                <div class="signin-logo">
+                    <img src="/logo/logo.png" alt="" srcset="">
+                </div>
+                <div class="form">
+                    <form action="/signin" method="post">
+                        <div class="form-signin">
+                        <input type="email" name="email" required>
+                        <label for="email">Email</label>
+                        <input type="password" name="password" required>
+                        <label for="password">Password</label>
+                        <div class="btns">
+                        <button type="submit" class="signin-btn">Signin</button>   
+                        <button type="submit" class="signup-btn">Signup</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
+        <!-- <div class="background-image">
+            <img src="/background/backgound.jpg" alt="backgound.jpg">
+        </div> -->
     </main>
     <footer>
         <%-include("./footer.ejs")%>
+        <script src="js/home.js"></script>
     </footer>
 </body>
 </html>

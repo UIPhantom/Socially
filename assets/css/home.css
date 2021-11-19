@@ -1,56 +1,169 @@
-body{
-    margin: 0px;
-
-}
-.space{
-    width: 50px;
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100&display=swap");
+body {
+  margin: 0px;
+  font-family: "M PLUS 1", sans-serif;
 }
 
-.button{
-    display: flex;
-    position: absolute;
-    text-align: center;
-    width: 30%;
-    height: 4.5rem;
-    flex-direction: row;
-    left: 65%;
-    justify-content: center;
-    align-items: center;
+.space {
+  width: 50px;
 }
 
-.btn-signin{
-    height: 45%;
-    width: 100%;
-    background-color: turquoise;
-    text-decoration: none;
-    color: #000;
-    border-radius: 20px;
-    cursor: default;
+.button {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  width: 30%;
+  height: 4.5rem;
+  flex-direction: row;
+  left: 65%;
+  justify-content: center;
+  align-items: center;
 }
-.btn-signup{
-    height: 45%;
-    width: 100%;
-    background-color: rgb(96, 224, 96);
-    text-decoration: none;
-    color: #000;
-    border-radius: 20px;
-    cursor: default;
+
+.btn-signin {
+  height: 45%;
+  width: 100%;
+  background-color: turquoise;
+  text-decoration: none;
+  color: #000;
+  border-radius: 20px;
+  cursor: default;
 }
-.btn-signup:hover{
-    box-shadow: 0px 0px 3px 3px rgb(154, 233, 154);
-    transition: ease-out 0.5s;
-    
+
+.btn-signup {
+  height: 45%;
+  width: 100%;
+  background-color: #60e060;
+  text-decoration: none;
+  color: #000;
+  border-radius: 20px;
+  cursor: default;
 }
-.btn-signin:hover{
-    box-shadow: 0px 0px 3px 3px rgb(155, 236, 229);
-    transition: ease-out 0.5s;
-    
+
+.btn-signup:hover {
+  box-shadow: 0px 0px 3px 3px #9ae99a;
+  transition: ease-out 0.5s;
 }
-.btn-icon{
-    margin-top: 7px;
-    font-size: 15px;
+
+.btn-signin:hover {
+  box-shadow: 0px 0px 3px 3px #9bece5;
+  transition: ease-out 0.5s;
 }
-.background-image img{
-    height: 90%;
-    width: 100%;
+
+.btn-icon {
+  margin-top: 7px;
+  font-size: 15px;
 }
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .signin {
+  border-radius: 20px;
+  border: 5px dotted aqua;
+  height: 35rem;
+  width: 40rem;
+  margin: 12.5rem;
+  box-shadow: 5px 10px 10px 10px aquamarine;
+}
+main .form-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  height: 32rem;
+  width: 35rem;
+  background-color: aquamarine;
+  flex-direction: column;
+  border-radius: 20px;
+}
+main .signin-logo {
+  height: 20%;
+  width: 50%;
+}
+main .signin-logo img {
+  height: 100%;
+  width: 100%;
+}
+main .form {
+  margin: 10px;
+  height: 70%;
+  width: 90%;
+  background-color: white;
+  border-radius: 20px;
+}
+main .form .form-signin {
+  margin-top: 15%;
+  font-size: 30px;
+}
+main .form .form-signin input {
+  margin: 50px;
+  border: 0;
+  border-bottom: 2px solid #333;
+  padding: 15px 0;
+  display: block;
+  font-size: 18px;
+  font-family: "M PLUS 1", sans-serif;
+  width: 80%;
+  transition: 0.1s ease-in;
+}
+main .form .form-signin input:focus, main .form .form-signin input :valid {
+  border-bottom-color: #1bf607;
+  outline: none;
+}
+main .form .form-signin input:focus + label span, main .form .form-signin input :valid + label span {
+  color: #1bf607;
+  transform: translateY(-30px);
+}
+main .form .form-signin label {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 50px;
+  font-weight: 700;
+}
+main .form .form-signin label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+main .form .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 50px;
+}
+main .form .btns .signin-btn {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  border: 2px solid aqua;
+  width: 50%;
+  height: 40px;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 2px aquamarine;
+}
+main .form .btns .signin-btn:hover {
+  border-radius: 0px;
+  transition: border-radius ease-out 2.5s;
+}
+main .form .btns .signup-btn {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  border: 2px solid tan;
+  width: 50%;
+  height: 40px;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 2px tan;
+}
+main .form .btns .signup-btn:hover {
+  border-radius: 0px;
+  transition: border-radius linear 2.5s;
+}
+
+/*# sourceMappingURL=home.css.map */

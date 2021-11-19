@@ -5,11 +5,13 @@
   align-items: flex-end;
   height: 4rem;
   width: 100%;
-  background-color: red;
+  background-color: aquamarine;
 }
 .header .site-logo {
   height: 100%;
   width: 100%;
+  margin-left: 10px;
+  margin-bottom: -5px;
 }
 
 /*# sourceMappingURL=header.css.map */
