@@ -1,11 +1,12 @@
 .footer {
+  transition: all ease-in-out 2s;
   position: absolute;
   bottom: 0;
   display: flex;
   align-items: flex-end;
   height: 4rem;
   width: 100%;
-  background-color: aquamarine;
+  background-color: aqua;
 }
 
 /*# sourceMappingURL=footer.css.map */

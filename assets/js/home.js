@@ -14,3 +14,18 @@ labels.forEach(label => {
 			">${letter}</span>`)
 		.join('');
 });
+
+function firstStart(){
+	const main = document.getElementsByTagName("main");
+	const head = document.getElementById("head");
+	const foot = document.getElementById("footer");
+	const input = document.getElementsByTagName("input");
+	const btn = document.getElementsByTagName("button");
+	btn[0].style.visibility = "visible";
+	btn[1].style.visibility = "visible";
+	input[0].type = "email";
+	input[1].type = "pssword";
+	foot.classList.add("footer");
+	head.classList.add("header");
+	main[0].classList.add("main");
+}

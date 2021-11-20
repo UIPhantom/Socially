@@ -11,72 +11,24 @@ body{
     margin: 0px;
     font-family: 'M PLUS 1', sans-serif;
 }
-.space{
-    width: 50px;
-}
 
-.button{
-    display: flex;
-    position: absolute;
-    text-align: center;
-    width: 30%;
-    height: 4.5rem;
-    flex-direction: row;
-    left: 65%;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-signin{
-    height: 45%;
-    width: 100%;
-    background-color: turquoise;
-    text-decoration: none;
-    color: #000;
-    border-radius: 20px;
-    cursor: default;
-}
-.btn-signup{
-    height: 45%;
-    width: 100%;
-    background-color: rgb(96, 224, 96);
-    text-decoration: none;
-    color: #000;
-    border-radius: 20px;
-    cursor: default;
-}
-.btn-signup:hover{
-    box-shadow: 0px 0px 3px 3px rgb(154, 233, 154);
-    transition: ease-out 0.5s;
-    
-}
-.btn-signin:hover{
-    box-shadow: 0px 0px 3px 3px rgb(155, 236, 229);
-    transition: ease-out 0.5s;
-    
-}
-.btn-icon{
-    margin-top: 7px;
-    font-size: 15px;
-}
-
-main{
+.main{
     @include flex-center($column);
     .signin{
-
         border-radius: 20px;
-        border: 5px dotted aqua;
+        border: 5px solid $primarycolor;
         height: 35rem;
-        width: 40rem;
+        width: 38rem;
         margin: 12.5rem;
-        box-shadow: 5px 10px 10px 10px aquamarine
+        transition: all 1s;
+        // box-shadow: 5px 10px 10px 10px $primarycolor;
     }
     .form-layout{
         @include flex-center($column);
         margin: 20px;
         height: 32rem;
         width: 35rem;
-        background-color: aquamarine;
+        background-color: $primarycolor;
         flex-direction: $column;
         border-radius: 20px;
     }
@@ -156,31 +108,31 @@ main{
             .signin-btn{
                 font-family: 'M PLUS 1', sans-serif;
                 font-weight: 700;
-                border: 2px solid aqua;
+                border: 2px solid $primarycolor;
                 width: 50%;
                 height: 40px;
                 margin-left: 50px;
                 background-color: white;
                 border-radius: 20px;
-                box-shadow: 2px 2px 2px 2px aquamarine;
+                box-shadow: 2px 2px 2px 2px $primarycolor;
                 &:hover{ 
                     border-radius: 0px;
-                    transition: border-radius ease-out 2.5s;
+                    transition: border-radius 0.2s linear;
                 }
             }
             .signup-btn{
                 font-family: 'M PLUS 1', sans-serif;
                 font-weight: 700;
-                border: 2px solid tan;
+                border: 2px solid springgreen;
                 width: 50%;
                 height: 40px;
                 margin-left: 50px;
                 background-color: white;
                 border-radius: 20px;
-                box-shadow: 2px 2px 2px 2px tan;
+                box-shadow: 2px 2px 2px 2px springgreen;
                 &:hover{ 
                     border-radius: 0px;
-                    transition: border-radius linear 2.5s;
+                    transition: border-radius linear 0.2s;
                 }
             }
         }

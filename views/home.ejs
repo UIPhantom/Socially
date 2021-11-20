@@ -1,18 +1,22 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="/css/home.css">
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
 </head>
-<body>
-    <header>        
-            <%-include("./header.ejs")%>
+
+<body onload="firstStart();">
+    <header>
+        <%-include("./header.ejs")%>
     </header>
     <main>
-        <div class="signin">
+        <div class="signin" id="signin-form">
             <div class="form-layout">
                 <div class="signin-logo">
                     <img src="/logo/logo.png" alt="" srcset="">
@@ -20,14 +24,14 @@
                 <div class="form">
                     <form action="/signin" method="post">
                         <div class="form-signin">
-                        <input type="email" name="email" required>
-                        <label for="email">Email</label>
-                        <input type="password" name="password" required>
-                        <label for="password">Password</label>
-                        <div class="btns">
-                        <button type="submit" class="signin-btn">Signin</button>   
-                        <button type="submit" class="signup-btn">Signup</button>
-                        </div>
+                            <input type="hidden" name="email" required>
+                            <label for="email">Email</label>
+                            <input type="hidden" name="password" required>
+                            <label for="password">Password</label>
+                            <div class="btns">
+                                <button type="submit" style="visibility: hidden;" class="signin-btn">Signin</button>
+                                <button type="submit" style="visibility: hidden;" class="signup-btn">Signup</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -39,7 +43,8 @@
     </main>
     <footer>
         <%-include("./footer.ejs")%>
-        <script src="js/home.js"></script>
+            <script src="js/home.js"></script>
     </footer>
 </body>
+
 </html>
