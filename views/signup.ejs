@@ -34,20 +34,20 @@
                             <label for="password" style="display: none;">Password</label>
                             </div>
                             <div>
-                                <input type="text" name="firstname" required>
-                            <label for="firstname">First Name</label>
+                                <input type="hidden" name="firstname" required>
+                            <label for="firstname" style="display: none;">First Name</label>
                             </div>
                             <div>
-                                <input type="text" name="lastname" required>
-                            <label for="lastname">Last Name</label>
+                                <input type="hidden" name="lastname" required>
+                            <label for="lastname" style="display: none;">Last Name</label>
                             </div>
-                            <div>
-                                <label for="gender" style="position: relative;">Gender </label>
-                               <select name="gender" id="" required>
+                            <div id="select-gender" style="display: none;">
+                                <label for="gender" style="position: relative;">Gender</label>
+                               <select name="gender" required>
+                                   <option value="" selected  disabled>Select a gender</option>
                                    <option value="male">Male</option>
                                    <option value="female">Female</option>
                                </select> 
-                               
                             </div>
                             <div class="btns">
                                 <button type="submit" style="visibility: hidden;" class="signup-btn">Signup</button>
