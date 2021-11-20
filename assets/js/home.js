@@ -21,10 +21,13 @@ function firstStart(){
 	const foot = document.getElementById("footer");
 	const input = document.getElementsByTagName("input");
 	const btn = document.getElementsByTagName("button");
+	const label = document.getElementsByTagName("label");
+	label[0].style.display = "block";
+	label[1].style.display = "block";
 	btn[0].style.visibility = "visible";
 	btn[1].style.visibility = "visible";
 	input[0].type = "email";
-	input[1].type = "pssword";
+	input[1].type = "password";
 	foot.classList.add("footer");
 	head.classList.add("header");
 	main[0].classList.add("main");
