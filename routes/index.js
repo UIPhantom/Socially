@@ -11,7 +11,6 @@ router.get("/user/profile", passport.checkAuthentication, ProfileController.view
 router.get("/signin", SigninController.view);
 router.get("/signup" , SignupController.view);
 router.post("/signup" , SignupController.signup);
-//router.post("/signin", SigninController.signin);
 router.get("/signout", UserController.endSession);
 //use passport authenticate
 router.post("/signin", passport.authenticate(

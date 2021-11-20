@@ -11,14 +11,11 @@ labels.forEach(label => {
 
 function firstStart() {
 	const main = document.getElementsByTagName("main");
-	const head = document.getElementById("head");
-	const foot = document.getElementById("footer");
 	const input = document.getElementsByTagName("input");
 	const btn = document.getElementsByTagName("button");
 	const label = document.getElementsByTagName("label");
 	const select = document.getElementById("select-gender");
-	foot.classList.add("footer");
-	head.classList.add("header");
+	const sign_back = document.getElementById("signin-back");
 
 	for (let index = 0; index < label.length - 1; index++) {
 		label[index].style.display = "block";
@@ -33,5 +30,6 @@ function firstStart() {
 	input[2].type = "text";
 	input[3].type = "text";
 	select.style.display = "block";
+	sign_back.style.visibility = "visible";
 	main[0].classList.add("main");
 }

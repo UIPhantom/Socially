@@ -35,5 +35,14 @@
     <footer>
         <%-include("../footer")%>
     </footer>
+    <script>
+        const head = document.getElementById("head");
+	    const foot = document.getElementById("footer");
+        (function headFoot(){
+        foot.classList.add("footer");
+	    head.classList.add("header");  
+        return headFoot;  
+        }());
+    </script>
 </body>
 </html>

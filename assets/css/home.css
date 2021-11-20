@@ -54,6 +54,7 @@ body {
   padding: 15px 0;
   display: block;
   font-size: 18px;
+  font-weight: 700;
   font-family: "M PLUS 1", sans-serif;
   width: 80%;
   transition: 0.1s ease-in;

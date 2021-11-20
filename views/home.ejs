@@ -30,7 +30,7 @@
                             <label for="password" style="display: none;">Password</label>
                             <div class="btns">
                                 <button type="submit" style="visibility: hidden;" class="signin-btn">Signin</button>
-                                <a href="/signup" class="signup-btn">Signup</a>
+                                <a href="/signup" id="signup-back" style="visibility: hidden;" class="signup-btn">Signup</a>
                             </div>
                         </div>
                     </form>
@@ -41,6 +41,15 @@
     <footer>
         <%-include("./footer.ejs")%>
             <script src="js/home.js"></script>
+            <script>
+                const head = document.getElementById("head");
+                const foot = document.getElementById("footer");
+                (function headFoot(){
+                foot.classList.add("footer");
+                head.classList.add("header");  
+                return headFoot;  
+                }());
+            </script>
     </footer>
 </body>
 

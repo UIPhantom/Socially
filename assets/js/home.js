@@ -1,8 +1,3 @@
-// const input = document.getElementsByTagName("input");
-// input[0].addEventListener("click" , () => {
-//     input[0].style.transition = "border 5s"
-//     input[0].style.borderWidth = "";    
-// });
 const inputs = document.querySelectorAll('.form-signin input');
 const labels = document.querySelectorAll('.form-signin label');
 
@@ -15,19 +10,22 @@ labels.forEach(label => {
 		.join('');
 });
 
-function firstStart(){
+function firstStart() {
 	const main = document.getElementsByTagName("main");
-	const head = document.getElementById("head");
-	const foot = document.getElementById("footer");
 	const input = document.getElementsByTagName("input");
 	const btn = document.getElementsByTagName("button");
 	const label = document.getElementsByTagName("label");
-	foot.classList.add("footer");
-	head.classList.add("header");
-	label[0].style.display = "block";
-	label[1].style.display = "block";
-	btn[0].style.visibility = "visible";
+	const sign_back = document.getElementById("signup-back");
+
+	for (let index = 0; index < label.length; index++) {
+		label[index].style.display = "block";
+	}
+
+	for (let index = 0; index < btn.length; index++) {
+		btn[index].style.visibility = "visible";
+	}
 	input[0].type = "email";
 	input[1].type = "password";
+	sign_back.style.visibility = "visible";
 	main[0].classList.add("main");
 }
