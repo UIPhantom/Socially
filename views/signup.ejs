@@ -1,53 +1,68 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="/css/home.css"> -->
     <link rel="stylesheet" href="/css/signup.css">
-    <title><%=title%></title>
+    <title>
+        <%= title %>
+    </title>
 </head>
-<body>
+
+<body onload="firstStart();">
     <header>
-        <%- include("./header.ejs") %>
+        <%-include("./header.ejs")%>
     </header>
     <main>
-        <section>
-            <div class="left">
-                <img src="/background/backgound.jpg" alt="background.jpg">
-            </div>
-            <div class="box"></div>
-            <div class="right">
-                <form action="/signup" method="post">
-                    <div class="signup-logo">
-                        <img src="/logo/signup.png" alt="">
-                    </div>
-                    <div class="form-fields">
-                    <label for="name">Name</label>
-                    <input type="text" name="name">
-                    <label for="email">Email</label>
-                    <input type="email" name="email">
-                    <label for="password">Password</label>
-                    <input type="password" name="password">
-                    <label for="confirm">Confirm Password</label>
-                    <input type="password" name="confirm">
-                    <label for="gender">Gender</label>
-                    <select name="gender">
-                        <option value="" hidden>Select a gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                    <button class="signup" type="submit"><i class="fa-solid fa-user-plus btn-icon"> Sign Up</i></button>
+        <div class="signup" id="signin-form">
+            <div class="form-layout">
+                <div class="signin-logo">
+                    <img src="/logo/logo.png" alt="logo.png">
                 </div>
-                   
-                </form>
-                <div class="last">
-                    <p>Already have an account?</p>
-                        <a class="btn-signin" href="/signin"><i class="fa-solid fa-right-to-bracket btn-icon"> Sign In</i></a>
+                <div class="form">
+                    <form action="/signup" method="post">
+                        <div class="form-signup">
+                            <div>
+                                <input type="hidden" name="email" required>
+                            <label for="email" style="display: none;">Email</label>
+                            </div>
+                            <div>
+                                <input type="hidden" name="password" required>
+                            <label for="password" style="display: none;">Password</label>
+                            </div>
+                            <div>
+                                <input type="text" name="firstname" required>
+                            <label for="firstname">First Name</label>
+                            </div>
+                            <div>
+                                <input type="text" name="lastname" required>
+                            <label for="lastname">Last Name</label>
+                            </div>
+                            <div>
+                                <label for="gender" style="position: relative;">Gender </label>
+                               <select name="gender" id="" required>
+                                   <option value="male">Male</option>
+                                   <option value="female">Female</option>
+                               </select> 
+                               
+                            </div>
+                            <div class="btns">
+                                <button type="submit" style="visibility: hidden;" class="signup-btn">Signup</button>
+                                <a href="/" class="signin-back">Signin</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
-    <%- include("./footer.ejs") %>
+    <footer>
+        <%-include("./footer.ejs")%>
+            <script src="js/signup.js"></script>
+    </footer>
 </body>
+
 </html>

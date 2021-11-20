@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100&display=swap");
+@mixin flex-center($column){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

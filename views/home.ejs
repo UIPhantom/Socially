@@ -19,7 +19,7 @@
         <div class="signin" id="signin-form">
             <div class="form-layout">
                 <div class="signin-logo">
-                    <img src="/logo/logo.png" alt="" srcset="">
+                    <img src="/logo/logo.png" alt="logo.png" srcset="">
                 </div>
                 <div class="form">
                     <form action="/signin" method="post">
@@ -30,16 +30,13 @@
                             <label for="password" style="display: none;">Password</label>
                             <div class="btns">
                                 <button type="submit" style="visibility: hidden;" class="signin-btn">Signin</button>
-                                <button type="submit" style="visibility: hidden;" class="signup-btn">Signup</button>
+                                <a href="/signup" class="signup-btn">Signup</a>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <!-- <div class="background-image">
-            <img src="/background/backgound.jpg" alt="backgound.jpg">
-        </div> -->
     </main>
     <footer>
         <%-include("./footer.ejs")%>

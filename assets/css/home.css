@@ -100,8 +100,15 @@ body {
   transition: border-radius 0.2s linear;
 }
 .main .form .btns .signup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "M PLUS 1", sans-serif;
   font-weight: 700;
+  font-size: small;
+  color: #000;
+  text-decoration: none;
+  cursor: default;
   border: 2px solid springgreen;
   width: 50%;
   height: 40px;

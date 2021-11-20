@@ -1,98 +1,142 @@
-body{
-    margin: 0px;
-    background-image:linear-gradient(120deg,rgb(235, 55, 55),red);
-}
-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100&display=swap");
+body {
+  margin: 0px;
+  font-family: "M PLUS 1", sans-serif;
 }
 
-section .left{
-    height : 50rem;
-    width  : 50rem;
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .signup {
+  border-radius: 20px;
+  border: 5px solid aqua;
+  height: 51.2rem;
+  width: 38rem;
+  margin: 12.5rem;
+  transition: all 1s;
+}
+.main .form-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  height: 50rem;
+  width: 36.7rem;
+  background-color: aqua;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.main .signin-logo {
+  height: 15%;
+  width: 50%;
+}
+.main .signin-logo img {
+  height: 100%;
+  width: 100%;
+}
+.main .form {
+  margin: 27px;
+  height: 80%;
+  width: 90%;
+  background-color: white;
+  border-radius: 20px;
+}
+.main .form .form-signup {
+  margin-top: 15%;
+}
+.main .form .form-signup input {
+  margin: 50px;
+  border: 0;
+  border-bottom: 2px solid #333;
+  padding: 15px 0;
+  display: block;
+  font-size: 18px;
+  font-family: "M PLUS 1", sans-serif;
+  width: 80%;
+  transition: 0.1s ease-in;
+}
+.main .form .form-signup input:focus, .main .form .form-signup input :valid {
+  border-bottom-color: #1bf607;
+  outline: none;
+}
+.main .form .form-signup input:focus + label span, .main .form .form-signup input :valid + label span {
+  color: #1bf607;
+  transform: translateY(-30px);
+}
+.main .form .form-signup label {
+  position: absolute;
+  margin-top: -120px;
+  margin-left: 50px;
+  font-weight: 700;
+}
+.main .form .form-signup label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.main .form .form-signup select {
+  margin-left: 100px;
+  font-size: 18px;
+  width: 50%;
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+}
+.main .form .form-signup select option {
+  font-weight: 700;
+}
+.main .form .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+.main .form .btns .signin-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: small;
+  color: #000;
+  text-decoration: none;
+  cursor: default;
+  border: 2px solid aqua;
+  width: 50%;
+  height: 40px;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 2px aqua;
+}
+.main .form .btns .signin-back:hover {
+  border-radius: 0px;
+  transition: border-radius linear 0.2s;
+}
+.main .form .btns .signup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 700;
+  font-size: small;
+  color: #000;
+  text-decoration: none;
+  cursor: default;
+  border: 2px solid springgreen;
+  width: 50%;
+  height: 40px;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 2px springgreen;
+}
+.main .form .btns .signup-btn:hover {
+  border-radius: 0px;
+  transition: border-radius linear 0.2s;
 }
 
-.left img{
-    height: 100%;
-    width: 100%;
-}
-
-section .box{
-    width: 4rem;
-}
-
-section .right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height : 30rem;
-    width  : 50rem;
-    text-align: center;
-}
-input{
-    outline: none;
-    border: 0px;
-    background-color: transparent;
-    border-bottom: 1px solid black;
-    border-width: 2px;
-    width: 10%;
-    
-}
-label, input{
-    margin: 15px;
-}
-select{
-    border-radius: 20px 20px 20px 20px;
-}
-.signup{
-    border: 0px;
-    margin-left: 50px;
-    margin-top: 20px;
-    height: 50px;
-    width: 50%;
-    background-color: rgb(96, 224, 96);
-    text-decoration: none;
-    color: #000;
-    border-radius: 20px;
-}
-.signup:hover{
-    box-shadow: 0px 0px 3px 3px rgb(154, 233, 154);
-    transition: ease-out 0.5s;
-    
-}
-.btn-signin{
-    padding: 10px;
-    height: 30px;
-    width: 50%;
-    background-color: turquoise;
-    border-radius: 20px;
-    cursor: default;
-}
-.btn-signin:hover{
-    box-shadow: 0px 0px 3px 3px rgb(155, 236, 229);
-    transition: ease-out 0.5s;
-}
-.btn-signin i{
-    margin-top: 10px;
-    color: #000;
-    font-size: 13px;
-}
-.form-fields{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 7rem;
-}
-p{
-    margin-right: 10px;
-}
-.last{
-    display: flex;
-    position: absolute;
-    text-align: center;
-    bottom: 10%;
-    right: 21%;
-    margin: 10px;
-}
+/*# sourceMappingURL=signup.css.map */
