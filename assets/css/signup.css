@@ -58,11 +58,11 @@ body {
   transition: 0.1s ease-in;
 }
 .main .form .form-signup input:focus, .main .form .form-signup input :valid {
-  border-bottom-color: #1bf607;
+  border-bottom-color: black;
   outline: none;
 }
 .main .form .form-signup input:focus + label span, .main .form .form-signup input :valid + label span {
-  color: #1bf607;
+  color: black;
   transform: translateY(-30px);
 }
 .main .form .form-signup label {
