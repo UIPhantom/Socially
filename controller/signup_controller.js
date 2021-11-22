@@ -10,10 +10,6 @@ module.exports.view = (req, res) => {
 }
 
 module.exports.signup = (req, res) => {
-    if (req.body.password != req.body.confirm) {
-        alert("Passwords should match");
-        return res.redirect("back");
-    }
     User.findOne({ email: req.body.email }, (err, user) => {
         if (err) {
             console.log("No email found");
