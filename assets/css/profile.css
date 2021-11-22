@@ -1,92 +1,17 @@
-body{
-    margin: 0px;
-}
-.profile-head{
-    display: flex;
-    position: absolute;
-    right: 1%;
-    align-items: center;
-    justify-content: center;
-    margin: 1px;
-}
-.logout-button{
-    height: 2.7rem;
-    width: 70%;
-    margin-top: 2px;
-    border: 3px solid white;
-    background-color:rgb(246, 74, 74);
-    text-align: center;
-    border-radius: 20px;
-}
-.logout-button i{
-    color: #000;
-    margin: 12px;
-    font-size: 20px;
-}
-.space{
-    width: 30px;
-}
+/* Error: Undefined variable.
+ *     ,
+ * 108 |                 font-family: $fontMplus;  
+ *     |                              ^^^^^^^^^^
+ *     '
+ *   assets/scss/profile.scss 108:30  root stylesheet */
 
-.avatar{
-    margin-top: 5px;
-    height: 60px;
-    width: 80px;
-    border-radius: 30px;
-    background-image: linear-gradient(30deg, red, purple);
-    
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a     \2577 \a 108 \2502                  font-family: $fontMplus;  \a     \2502                               ^^^^^^^^^^\a     \2575 \a   assets/scss/profile.scss 108:30  root stylesheet";
 }
-.avatar img{
-    height: 100%;
-    width: 100%;
-    border-radius: 30px;
-}
-
-.logout-button a{
-    cursor: default;
-}
-
-.profile-border{
-    display: flex;
-    margin-top: 80px;
-    align-items: center;
-    justify-content: center;
-    height: 205px;
-    width: 205px;
-    border-radius: 50%;
-    background-color: aquamarine
-}
-
-.profile-img{
-    position:absolute;
-    z-index: 2;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-}
-.profile-img img{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-}
-.section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-details{
-    height: 200px;
-    width: 95%;
-    margin-top: -65px;
-    overflow: hidden;
-    position: relative;
-    border: 2px solid aquamarine;
-    border-radius: 20px 20px 20px 20px;
-    background-color: rgb(226, 251, 243);
-    /* background-image: linear-gradient(30deg, red, purple); */
-}
-
-
-
-
