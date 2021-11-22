@@ -3,7 +3,7 @@
 
 body{
     margin: 0px;
-    font-family: 'M PLUS 1', sans-serif;
+    font-family: $fontMplus;
 }
 .main{
     @include flex-center($column);
@@ -53,15 +53,15 @@ body{
                 padding: 15px 0;
                 display: block;
                 font-size: 18px;
-                font-family: 'M PLUS 1', sans-serif;
+                font-family: $fontMplus;
                 width: 80%;
                 transition: 0.1s ease-in;
                 &:focus,:valid{
-                    border-bottom-color: rgb(27, 246, 7);
+                    border-bottom-color: black;
 	                outline: none;
                 }
                 &:focus + label span, :valid + label span{
-                    color: rgb(27, 246, 7);
+                    color:black;
 	                transform: translateY(-30px);
                 }
             }
@@ -81,7 +81,7 @@ body{
                 margin-left: 100px;
                 font-size: 18px;
                 width: 50%;
-                font-family: 'M PLUS 1', sans-serif;
+                font-family: $fontMplus;
                 font-weight: 700;
                 option{
                     font-weight: 700;
@@ -94,7 +94,7 @@ body{
             //     border: 0px;
             //     border-bottom: 1px solid;
             //     font-size: 20px;
-            //     font-family: 'M PLUS 1', sans-serif;
+            //     font-family: $fontMplus;
             //     &:focus{
             //         outline-style: none;
             //         border-bottom: 1px solid rgb(0, 204, 255);
@@ -111,7 +111,7 @@ body{
             margin-right: 50px;
             .signin-back{
                 @include flex-center($column);
-                font-family: 'M PLUS 1', sans-serif;
+                font-family: $fontMplus;
                 font-weight: 700;
                 font-size: small;
                 color: #000;
@@ -131,7 +131,7 @@ body{
             } 
             .signup-btn{
                 @include flex-center($column);
-                font-family: 'M PLUS 1', sans-serif;
+                font-family: $fontMplus;
                 font-weight: 700;
                 font-size: small;
                 color: #000;

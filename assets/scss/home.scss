@@ -3,7 +3,7 @@
 
 body{
     margin: 0px;
-    font-family: 'M PLUS 1', sans-serif;
+    font-family: $fontMplus;
 }
 
 .main{
@@ -55,15 +55,15 @@ body{
                 display: block;
                 font-size: 18px;
                 font-weight: 700;
-                font-family: 'M PLUS 1', sans-serif;
+                font-family: $fontMplus;
                 width: 80%;
                 transition: 0.1s ease-in;
                 &:focus,:valid{
-                    border-bottom-color: rgb(27, 246, 7);
+                    border-bottom-color: black;
 	                outline: none;
                 }
                 &:focus + label span, :valid + label span{
-                    color: rgb(27, 246, 7);
+                    color: black;
 	                transform: translateY(-30px);
                 }
             }
@@ -86,7 +86,7 @@ body{
             //     border: 0px;
             //     border-bottom: 1px solid;
             //     font-size: 20px;
-            //     font-family: 'M PLUS 1', sans-serif;
+            //     font-family: $fontMplus;
             //     &:focus{
             //         outline-style: none;
             //         border-bottom: 1px solid rgb(0, 204, 255);
@@ -101,7 +101,7 @@ body{
             @include flex-center($column);
             margin-right: 50px;
             .signin-btn{
-                font-family: 'M PLUS 1', sans-serif;
+                font-family: $fontMplus;
                 font-weight: 700;
                 border: 2px solid $primarycolor;
                 width: 50%;
@@ -117,7 +117,7 @@ body{
             }
             .signup-btn{
                 @include flex-center($column);
-                font-family: 'M PLUS 1', sans-serif;
+                font-family: $fontMplus;
                 font-weight: 700;
                 font-size: small;
                 color: #000;

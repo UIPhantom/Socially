@@ -4,9 +4,7 @@ module.exports.view = (req, res) => {
     if(req.isAuthenticated()){
         return res.redirect("/user/profile");
     }
-    return res.render("signin", {
-        title: "Socially | Signin"
-    });
+    return res.redirect("/");
 };
 
 // module.exports.signin = (req, res) => {
