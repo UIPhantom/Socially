@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/profile.css">
+    <link rel="shortcut icon" type="image" href="/logo/icon.png">
     <title><%=title%></title>
 </head>
 <body>
     <header>
         <%-include("../header")%>
         <div class="profile-head">
+            
             <div class="avatar">
                 <img src="/avatar/test.jpg" alt="">
             </div>
@@ -22,16 +24,25 @@
             </div>
         </div>
     </header>
-    <main class="section">
+    <main class="main">
         <section class="profile-border">
             <div class="profile-img">
                 <img src="/avatar/test.jpg" alt="">
             </div>
         </section>
         <section class="profile-details">
-            
+            <div class="details">
+               
+                    <div class = "blank">
+                        <h1><%=name%></h1>
+                    </div>
+                    <div class = "blank">
+                        <h1><%=email%></h1>
+                    </div>
+            </div>
         </section>
     </main>
+
     <footer>
         <%-include("../footer")%>
     </footer>
@@ -44,5 +55,6 @@
         return headFoot;  
         }());
     </script>
+
 </body>
 </html>
