@@ -1,0 +1,73 @@
+@import "_mixings";
+@import "_variables";
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.left-panel{
+    display: flex;
+    position: relative;
+    width: 250px;
+    height: 950px;
+    margin-top: 60px;
+    background-color: aqua;
+    opacity: 20%;
+    .panel-options{
+        @include flex-center($column);
+        flex-direction: $column;
+        margin-top: 100px;
+        height: 100px;
+        width: inherit;
+        background-color: aquamarine;
+        font-size: 20px;
+        a{
+            text-decoration: none;
+            
+        }
+        span{
+            margin-left: 120px;
+            font-family: monospace;
+        }
+        .post-tag{
+            span{
+                margin-left: 130px;
+            }
+            text-align: center;
+            width: inherit;
+            margin: 5px;
+            font-weight: 900;
+            &:hover{
+                background-color: lightskyblue;
+            }
+            &:active::after{
+                content: ">";
+            }
+        }
+        .photo-tag{
+            text-align: center;
+            width: inherit;
+            margin: 5px;
+            font-weight: 900;
+            &:hover{
+                background-color: lightskyblue;
+            }
+            &:active::after{
+                content: ">";
+            }
+        }
+        .video-tag{
+            text-align: center;
+            width: inherit;
+            margin: 5px;
+            font-weight: 900;
+            &:hover{
+                background-color: lightskyblue;
+            }
+            &:active::after{
+                content: ">";
+            }
+        }
+    }
+}
+
+

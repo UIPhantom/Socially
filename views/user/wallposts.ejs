@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="/css/wall.css">
+    <title>
+        <%= title %>
+    </title>
+    <%-include("../header.ejs")%>
+        </header>
+</head>
+<body>
+        <div class="main-page">
+            <section class="left-panel">
+                <div class="panel-options">
+                    <div class="post-tag">
+                        <a href="#"><i class="fas fa-sticky-note"><span> Posts</span></i></a>
+                    </div>
+                    <div class="photo-tag">
+                        <a href="#"><i class="fas fa-camera-retro"></i><span> Photos</span></a>
+                    </div>
+                    <div class="video-tag">
+                        <a href="#"><i class="fas fa-video"></i><span> Videos</span></a>
+                    </div>
+                    <!-- <div class="panel-options">
+                        
+                    </div> -->
+                </div>
+        </section>
+        
+        <main class="main-wall">
+            <textarea name="post" id="" cols="30" rows="10">
+
+            </textarea>
+        </main>
+        <section class="panel">
+            <div class="right-panel">
+            </div>
+        </section>
+        </div>
+        <%-include("../footer.ejs")%> 
+</body>
+    <script>
+        const head = document.getElementById("head");
+	    const foot = document.getElementById("footer");
+        (function headFoot(){
+        foot.classList.add("footer");
+	    head.classList.add("header");  
+        return headFoot;  
+        }());
+    </script>
+</html>

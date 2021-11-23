@@ -1,0 +1,9 @@
+@import "_panel_right";
+@import "_panel_left";
+.main-page{
+    display: flex;
+    flex-direction: $row;
+}
+.main-wall{
+    margin: 100px;
+}

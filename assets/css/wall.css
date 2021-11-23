@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100&display=swap");
+.panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  margin-top: 60px;
+}
+.panel .right-panel {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  background-color: aqua;
+  opacity: 20%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.left-panel {
+  display: flex;
+  position: relative;
+  width: 250px;
+  height: 950px;
+  margin-top: 60px;
+  background-color: aqua;
+  opacity: 20%;
+}
+.left-panel .panel-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+  height: 100px;
+  width: inherit;
+  background-color: aquamarine;
+  font-size: 20px;
+}
+.left-panel .panel-options a {
+  text-decoration: none;
+}
+.left-panel .panel-options span {
+  margin-left: 120px;
+  font-family: monospace;
+}
+.left-panel .panel-options .post-tag {
+  text-align: center;
+  width: inherit;
+  margin: 5px;
+  font-weight: 900;
+}
+.left-panel .panel-options .post-tag span {
+  margin-left: 130px;
+}
+.left-panel .panel-options .post-tag:hover {
+  background-color: lightskyblue;
+}
+.left-panel .panel-options .post-tag:active::after {
+  content: ">";
+}
+.left-panel .panel-options .photo-tag {
+  text-align: center;
+  width: inherit;
+  margin: 5px;
+  font-weight: 900;
+}
+.left-panel .panel-options .photo-tag:hover {
+  background-color: lightskyblue;
+}
+.left-panel .panel-options .photo-tag:active::after {
+  content: ">";
+}
+.left-panel .panel-options .video-tag {
+  text-align: center;
+  width: inherit;
+  margin: 5px;
+  font-weight: 900;
+}
+.left-panel .panel-options .video-tag:hover {
+  background-color: lightskyblue;
+}
+.left-panel .panel-options .video-tag:active::after {
+  content: ">";
+}
+
+.main-page {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-wall {
+  margin: 100px;
+}
+
+/*# sourceMappingURL=wall.css.map */

@@ -1,0 +1,17 @@
+@import "_mixings";
+@import "_variables";
+.panel{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    margin-top: 60px;
+        .right-panel{
+            width: inherit;
+            height: inherit;
+            position: relative;
+            background-color: aqua;
+            opacity: 20%;
+    }
+}
