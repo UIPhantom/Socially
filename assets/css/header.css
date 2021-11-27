@@ -16,4 +16,8 @@
   margin-bottom: -5px;
 }
 
+html {
+  overflow-y: hidden;
+}
+
 /*# sourceMappingURL=header.css.map */

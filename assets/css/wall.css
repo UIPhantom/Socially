@@ -28,7 +28,7 @@ body {
   height: 950px;
   margin-top: 60px;
   background-color: aqua;
-  opacity: 20%;
+  opacity: 40%;
 }
 .left-panel .panel-options {
   display: flex;
@@ -95,6 +95,113 @@ body {
 
 .main-wall {
   margin: 100px;
+  width: 100%;
+}
+.main-wall .new-post-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 30%;
+  width: 70%;
+}
+.main-wall .new-post-container .new-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightskyblue;
+  height: 70%;
+  width: 98%;
+}
+.main-wall .new-post-container .new-post textarea {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 900;
+  height: 99%;
+  width: 99.8%;
+  border: 0px;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  font-size: 25px;
+}
+.main-wall .new-post-container .post-btn {
+  margin-left: 87%;
+  width: 100px;
+  height: 100px;
+  background-color: #2da9f6;
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: white;
+  border: 0px;
+  border-radius: 10px;
+}
+.main-wall .new-post-container .post-btn:hover {
+  opacity: 30%;
+}
+.main-wall .new-post-container .post-btn span {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 900;
+}
+.main-wall .float {
+  position: fixed;
+  right: 420;
+  bottom: 40;
+}
+.main-wall .floating-btn {
+  font-size: 40px;
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 0px;
+  background-color: aquamarine;
+}
+.main-wall .floating-btn:hover {
+  opacity: 60%;
+  background-color: lightskyblue;
+}
+.main-wall .posts-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  height: 30%;
+  width: 70%;
+  border: 1px solid black;
+}
+.main-wall .posts-container .post-avatar {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.main-wall .posts-container .post-avatar img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.main-wall .posts-container .name-post {
+  margin-top: 15px;
+  height: 20px;
+  width: 200px;
+  font-size: 20px;
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 900;
+}
+.main-wall .posts-container .name-post p {
+  margin: 0px;
+}
+.main-wall .posts-container .usermail {
+  height: 20px;
+  width: 200px;
+  font-size: 14px;
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-left: -198px;
+}
+.main-wall .posts-container .usermail p {
+  margin-top: 2px;
 }
 
 /*# sourceMappingURL=wall.css.map */

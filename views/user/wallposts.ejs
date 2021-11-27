@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,9 +31,29 @@
         </section>
         
         <main class="main-wall">
-            <textarea name="post" id="" cols="30" rows="10">
-
-            </textarea>
+            <div class="new-post-main" id="new-post-main" style="display: none;">
+                <div class="new-post-container">
+                    <div class="new-post">
+                        <textarea name="post" id="" cols="30" rows="10" maxlength="180"></textarea>
+                    </div>
+                    <br>
+                    <button class="post-btn"><i class="far fa-plus-square"><span> Post</span></i></button>
+                </div>
+            </div>
+            <div class="float">
+                <button class="floating-btn" id="floating-btn"><i id="floating-btn-icon" class="fas fa-plus-circle"></i></button>
+            </div>
+            <div class="posts-container">
+                <div class="post-avatar">
+                    <img src="/avatar/test.jpg" alt="">
+                </div>
+                <div class="name-post">
+                    <p><%=name%></p>
+                </div>
+                <div class="usermail">
+                    <p><%=email%></p>
+                </div>
+            </div>
         </main>
         <section class="panel">
             <div class="right-panel">
@@ -43,6 +62,7 @@
         </div>
         <%-include("../footer.ejs")%> 
 </body>
+    <script src="/js/wall.js"></script>
     <script>
         const head = document.getElementById("head");
 	    const foot = document.getElementById("footer");

@@ -6,4 +6,111 @@
 }
 .main-wall{
     margin: 100px;
+    width: 100%;
+    .new-post-container{
+        @include flex-center($column);
+        flex-direction: $column;
+        height: 30%;
+        width: 70%;
+        // background-color: aqua;
+        .new-post{
+            @include flex-center($column);
+            background-color: lightskyblue;
+            height: 70%;
+            width: 98%;
+            textarea{
+                font-family: $fontMplus;
+                font-weight: 900;
+                height: 99%;
+                width: 99.8%;
+                border: 0px;
+                box-sizing: border-box;
+                outline: none;
+                resize: none;
+                font-size: 25px;
+            }
+        }
+        .post-btn{
+            margin-left: 87%;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(45, 169, 246);
+            font-family: $fontMplus;
+            font-weight: 900;
+            font-size: 20px;
+            color: white;
+            border:0px;
+            border-radius: 10px;
+            &:hover{
+                opacity: 30%;
+            }
+            span{
+                font-family: $fontMplus;
+                font-weight: 900;
+            }
+        }
+    }
+    .float{
+        position: fixed;
+        right: 420;
+        bottom: 40;
+    }
+    .floating-btn{
+        font-size: 40px;
+        color: white;
+        height:60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 0px;
+        background-color: aquamarine;
+        &:hover{
+            opacity: 60%;
+            background-color: lightskyblue;
+        }
+    }
+
+    .posts-container{
+        display: flex;
+        flex-direction: $row;
+        margin-top: 20px;
+        height: 30%;
+        width: 70%;
+        border: 1px solid black;
+        .post-avatar{
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            margin: 10px;
+            img{
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        .name-post{
+            margin-top: 15px;
+             // border: 1px solid black;
+            height: 20px;
+            width: 200px;
+            font-size: 20px;
+            font-family: $fontMplus;
+            font-weight: 900;
+            p{
+                margin: 0px;
+            }
+        }
+        .usermail{
+            // border: 1px solid black;
+            height: 20px;
+            width: 200px;
+            font-size: 14px;
+            font-family: $fontMplus;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-left: -198px;
+            p{
+                margin-top: 2px;
+            }
+        }
+    }
 }

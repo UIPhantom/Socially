@@ -11,7 +11,7 @@ body{
     height: 950px;
     margin-top: 60px;
     background-color: aqua;
-    opacity: 20%;
+    opacity: 40%;
     .panel-options{
         @include flex-center($column);
         flex-direction: $column;
