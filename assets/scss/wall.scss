@@ -75,7 +75,7 @@
         margin-top: 20px;
         height: 30%;
         width: 70%;
-        border: 1px solid black;
+        //  border: 1px solid black;
         .post-avatar{
             height: 120px;
             width: 120px;
@@ -110,6 +110,22 @@
             margin-left: -198px;
             p{
                 margin-top: 2px;
+            }
+        }
+        .delete-post{
+            height: 30px;
+            width: 30px;
+            margin-left: 60%;
+            margin-top: 20px;
+            &:hover{
+                i{
+                    transition: all ease-in-out 0.5s;
+                    color: red;
+                }
+            }
+            i{
+                font-size: 30px;
+                color: 	lightgray;
             }
         }
     }

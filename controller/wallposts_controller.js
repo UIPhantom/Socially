@@ -8,3 +8,9 @@ module.exports.view = (req, res) => {
         email: `${email}`
     });
 }
+
+module.exports.photos = (req, res) => {
+  res.render("user/photos", {
+      title : "Socially | Photos"
+  });  
+}
