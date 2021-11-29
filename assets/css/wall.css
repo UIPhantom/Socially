@@ -8,6 +8,7 @@
   height: 100%;
   margin-top: 60px;
 }
+
 .panel .right-panel {
   width: inherit;
   height: inherit;
@@ -22,6 +23,8 @@ body {
 }
 
 .left-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   width: 250px;
@@ -30,100 +33,148 @@ body {
   background-color: aqua;
   opacity: 40%;
 }
+
 .left-panel .panel-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 100px;
   height: 100px;
   width: inherit;
   background-color: aquamarine;
   font-size: 20px;
 }
+
 .left-panel .panel-options a {
   text-decoration: none;
 }
+
 .left-panel .panel-options span {
   margin-left: 120px;
   font-family: monospace;
 }
+
 .left-panel .panel-options .post-tag {
   text-align: center;
   width: inherit;
   margin: 5px;
   font-weight: 900;
 }
+
 .left-panel .panel-options .post-tag span {
   margin-left: 130px;
 }
+
 .left-panel .panel-options .post-tag:hover {
   background-color: lightskyblue;
 }
+
 .left-panel .panel-options .post-tag:active::after {
   content: ">";
 }
+
 .left-panel .panel-options .photo-tag {
   text-align: center;
   width: inherit;
   margin: 5px;
   font-weight: 900;
 }
+
 .left-panel .panel-options .photo-tag:hover {
   background-color: lightskyblue;
 }
+
 .left-panel .panel-options .photo-tag:active::after {
   content: ">";
 }
+
 .left-panel .panel-options .video-tag {
   text-align: center;
   width: inherit;
   margin: 5px;
   font-weight: 900;
 }
+
 .left-panel .panel-options .video-tag:hover {
   background-color: lightskyblue;
 }
+
 .left-panel .panel-options .video-tag:active::after {
   content: ">";
 }
 
 .main-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .main-wall {
   margin: 100px;
   width: 100%;
+  overflow: auto;
 }
+
 .main-wall .new-post-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 30%;
   width: 70%;
 }
+
 .main-wall .new-post-container .new-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: lightskyblue;
   height: 70%;
   width: 98%;
 }
+
 .main-wall .new-post-container .new-post textarea {
   font-family: "M PLUS 1", sans-serif;
   font-weight: 900;
   height: 99%;
   width: 99.8%;
   border: 0px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
   resize: none;
   font-size: 25px;
 }
+
 .main-wall .new-post-container .post-btn {
   margin-left: 87%;
   width: 100px;
@@ -136,18 +187,22 @@ body {
   border: 0px;
   border-radius: 10px;
 }
+
 .main-wall .new-post-container .post-btn:hover {
   opacity: 30%;
 }
+
 .main-wall .new-post-container .post-btn span {
   font-family: "M PLUS 1", sans-serif;
   font-weight: 900;
 }
+
 .main-wall .float {
   position: fixed;
   right: 420;
   bottom: 40;
 }
+
 .main-wall .floating-btn {
   font-size: 40px;
   color: white;
@@ -157,64 +212,112 @@ body {
   border: 0px;
   background-color: aquamarine;
 }
+
 .main-wall .floating-btn:hover {
   opacity: 60%;
   background-color: lightskyblue;
 }
+
 .main-wall .posts-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 20px;
   height: 30%;
   width: 70%;
+  margin-bottom: 100px;
 }
+
 .main-wall .posts-container .post-avatar {
   height: 120px;
   width: 120px;
   border-radius: 50%;
   margin: 10px;
 }
+
 .main-wall .posts-container .post-avatar img {
   height: 100%;
   width: 100%;
   border-radius: 50%;
 }
+
 .main-wall .posts-container .name-post {
   margin-top: 15px;
   height: 20px;
   width: 200px;
+}
+
+.main-wall .posts-container .name-post a {
   font-size: 20px;
   font-family: "M PLUS 1", sans-serif;
   font-weight: 900;
+  color: #000;
+  text-decoration: none;
+  text-transform: none;
+  cursor: default;
 }
-.main-wall .posts-container .name-post p {
-  margin: 0px;
-}
+
 .main-wall .posts-container .usermail {
   height: 20px;
   width: 200px;
   font-size: 14px;
   font-family: "M PLUS 1", sans-serif;
-  font-weight: 600;
+  font-weight: 598;
   margin-top: 40px;
   margin-left: -198px;
 }
+
 .main-wall .posts-container .usermail p {
   margin-top: 2px;
 }
+
+.main-wall .posts-container .posts {
+  height: 155px;
+  width: 80%;
+  margin-top: 55px;
+  margin-left: -200px;
+}
+
+.main-wall .posts-container .posts p {
+  font-family: "M PLUS 1", sans-serif;
+  font-weight: 800;
+}
+
 .main-wall .posts-container .delete-post {
   height: 30px;
   width: 30px;
-  margin-left: 60%;
+  margin-left: 10px;
   margin-top: 20px;
 }
+
 .main-wall .posts-container .delete-post:hover i {
+  -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
   color: red;
 }
+
 .main-wall .posts-container .delete-post i {
   font-size: 30px;
   color: lightgray;
 }
 
+.main-wall .posts-container .post-options {
+  height: 30px;
+  width: 120px;
+  margin-top: 150px;
+  margin-left: -100px;
+}
+
+.main-wall .posts-container .post-options i {
+  margin: 2px;
+  font-size: 30px;
+}
+
+html {
+  overflow: hidden;
+}
 /*# sourceMappingURL=wall.css.map */

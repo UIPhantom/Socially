@@ -13,7 +13,7 @@ router.get("/signin", SigninController.view);
 router.get("/signup" , SignupController.view);
 router.post("/signup" , SignupController.signup);
 router.get("/signout", UserController.endSession);
-router.get("/user/wall",WallPostsController.view);
+router.get("/user/wall",passport.checkAuthentication,WallPostsController.view);
 router.get("/user/wall/photos", WallPostsController.photos);
 //use passport authenticate
 router.post("/signin", passport.authenticate(

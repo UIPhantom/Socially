@@ -4,13 +4,20 @@ body {
 }
 
 .profile-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   right: 1%;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1px;
 }
+
 .profile-head .avatar {
   margin-top: 5px;
   height: 60px;
@@ -18,14 +25,17 @@ body {
   border-radius: 30px;
   background-image: linear-gradient(30deg, red, purple);
 }
+
 .profile-head .avatar img {
   height: 100%;
   width: 100%;
   border-radius: 30px;
 }
+
 .profile-head .space {
   width: 30px;
 }
+
 .profile-head .logout-button {
   height: 2.7rem;
   width: 70%;
@@ -35,13 +45,16 @@ body {
   text-align: center;
   border-radius: 20px;
 }
+
 .profile-head .logout-button:hover {
   background-color: white;
   border: 3px solid black;
 }
+
 .profile-head .logout-button a {
   cursor: default;
 }
+
 .profile-head .logout-button a i {
   color: #000;
   margin: 12px;
@@ -49,21 +62,38 @@ body {
 }
 
 .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .main .profile-border {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 80px;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 205px;
   width: 205px;
   border-radius: 50%;
   background-color: aquamarine;
 }
+
 .main .profile-border .profile-img {
   position: absolute;
   z-index: 2;
@@ -71,6 +101,7 @@ body {
   width: 200px;
   border-radius: 50%;
 }
+
 .main .profile-border .profile-img img {
   height: 200px;
   width: 200px;
@@ -78,9 +109,15 @@ body {
 }
 
 .profile-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
   width: 90%;
   margin-top: -65px;
@@ -92,12 +129,14 @@ body {
   background-color: #e2fbf3;
   /* background-image: linear-gradient(30deg, red, purple); */
 }
+
 .profile-details .details {
   height: 70%;
   width: 85%;
   border: inherit;
   margin: 120px;
 }
+
 .profile-details .details .blank {
   height: 90px;
   width: 90%;
@@ -106,6 +145,7 @@ body {
   border: 2px solid black;
   background-color: lightgrey;
 }
+
 .profile-details .details .blank h1 {
   font-family: "M PLUS 1", sans-serif;
   font-size: 40px;
@@ -114,5 +154,4 @@ body {
   text-align: center;
   text-shadow: 2px 2px #157e5d;
 }
-
 /*# sourceMappingURL=profile.css.map */
