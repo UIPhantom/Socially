@@ -1,3 +1,4 @@
+//Add a post
 const postContainer = document.getElementById("new-post-main");
 const floatingButton = document.getElementById("floating-btn");
 const floatBtnIcon = document.getElementById("floating-btn-icon");
