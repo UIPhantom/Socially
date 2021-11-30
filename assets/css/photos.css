@@ -1,17 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100&display=swap");
 body {
   margin: 0px;
   padding: 0px;
 }
 
 .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
   border: 1px solid black;
 }
 .main .photos {
-  height: 200px;
-  width: 500px;
-  border: 5px solid black;
+  height: 610px;
+  width: 410px;
+  border: 2px solid black;
+  border-radius: 1.2rem;
+  margin: 6rem;
+  background-image: none;
+}
+.main .photos .share {
+  margin-top: 0.5rem;
+  height: 20px;
+  width: 400px;
+  border: 1px solid gray;
+}
+.main .photos img {
+  height: 500px;
+  width: 400px;
+  margin: 0.8rem 0rem 0rem 0.3rem;
+  border-radius: 1.1rem;
+}
+.main .photos .commentSection {
+  margin-top: 0.6rem;
+  width: 400px;
+  height: 45px;
+  border: 2px solid red;
 }
 
 /*# sourceMappingURL=photos.css.map */
