@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Yellowtail&display=swap");
 .footer {
-  box-shadow: 10px 10px 10px 10px slategray;
   position: relative;
   bottom: 0;
   display: flex;
