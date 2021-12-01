@@ -1,5 +1,26 @@
-<link rel="stylesheet" href="/css/header.css"  type="text/css">
-    <header id="head">
+<link rel="stylesheet" href="/css/header.css" type="text/css">
+<%if(locals.user){%>
+    <div id="head">
         <div class="site-logo">
             <a href="/"><img src="/logo/logo.png" alt="logo.png"></a>
         </div>
+    </div>
+    <div class="profile-head">
+            
+        <div class="avatar">
+            <img src="/avatar/test.jpg" alt="">
+        </div>
+        <div class="space">
+
+        </div>
+        <div class="logout-button">
+            <a href="/signout"><i class="fa-solid fa-power-off"></i></a>
+        </div>
+    </div>
+    <%} else {%>
+        <div id="head">
+            <div class="site-logo">
+                <a href="/"><img src="/logo/logo.png" alt="logo.png"></a>
+            </div>
+        </div>
+<%}%>

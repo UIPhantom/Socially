@@ -1,5 +1,5 @@
 //Add a post
-const postContainer = document.getElementById("new-post-main");
+const postContainer = document.getElementById("new-post-container");
 const floatingButton = document.getElementById("floating-btn");
 const floatBtnIcon = document.getElementById("floating-btn-icon");
 let floatBtn = false;
@@ -18,25 +18,40 @@ floatingButton.addEventListener("click", () => {
    });
 
 //Post Icons
-const iconHand = document.getElementById("icon-hand");
+const iconHand = document.getElementsByClassName("icon-hand");
 let handIcon = false;
-iconHand.addEventListener("click", () => {
-   handIcon = !handIcon;
-   if(handIcon){
-      iconHand.classList.remove("far");
-      iconHand.classList.add("fas");
-      iconHand.style.color = "blueviolet";
+window.onload = () => {
+   for(let i=0; i<iconHand.length; i++){
+      iconHand[i].addEventListener("click", () => {
+         handIcon = !handIcon;
+         if(handIcon){
+            iconHand[i].classList.remove("far");
+            iconHand[i].classList.add("fas");
+         }
+         else{
+            iconHand[i].classList.add("far");
+            iconHand[i].classList.remove("fas");
+         }
+      });
+      iconHand[i].addEventListener("mouseenter", () => {
+         iconHand[i].style.color = "blueviolet";
+      });
+      iconHand[i].addEventListener("mouseleave" , () => {
+         iconHand[i].style.color = "blueviolet";
+      });
    }
-   else{
-      iconHand.classList.add("far");
-      iconHand.classList.remove("fas");
-      iconHand.style.color = "black";
-   }
+}
+
+
+//New post icons
+const addPost = document.getElementById("add-post-icon");
+
+addPost.addEventListener("mouseenter" , () => {
+   addPost.textContent = "send";
 });
 
-iconHand.addEventListener("mouseenter", () => {
-   iconHand.style.color = "blueviolet";
+addPost.addEventListener("mouseleave" , () => {
+   addPost.textContent = "post_add";
 });
-iconHand.addEventListener("mouseleave" , () => {
-   iconHand.style.color = "black";
-});
+
+

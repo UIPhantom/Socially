@@ -1,34 +1,77 @@
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Yellowtail&display=swap");
 .header {
-  -webkit-transition: all linear 2s;
-  transition: all linear 2s;
   position: absolute;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   height: 4rem;
   width: 100%;
   background-color: aqua;
 }
-
 .header .site-logo {
   height: 64px;
   width: 160px;
   margin-left: 10px;
   margin-bottom: 4px;
 }
-
 .header .site-logo img {
   margin-top: 10px;
   width: 100%;
   height: 100%;
 }
 
-html {
-  overflow-y: hidden;
+.profile-head {
+  display: flex;
+  position: absolute;
+  right: 1%;
+  align-items: center;
+  justify-content: center;
+  margin: 1px;
 }
+.profile-head .avatar {
+  margin-top: 5px;
+  height: 60px;
+  width: 80px;
+  border-radius: 30px;
+  background-image: linear-gradient(30deg, red, purple);
+}
+.profile-head .avatar img {
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+}
+.profile-head .space {
+  width: 30px;
+}
+.profile-head .logout-button {
+  height: 2.7rem;
+  width: 70%;
+  margin-top: 2px;
+  border: 3px solid white;
+  background-color: #f64a4a;
+  text-align: center;
+  border-radius: 20px;
+}
+.profile-head .logout-button:hover {
+  background-color: white;
+  border: 3px solid black;
+}
+.profile-head .logout-button a {
+  cursor: default;
+}
+.profile-head .logout-button a i {
+  color: #000;
+  margin: 12px;
+  font-size: 20px;
+}
+
+html {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
 /*# sourceMappingURL=header.css.map */

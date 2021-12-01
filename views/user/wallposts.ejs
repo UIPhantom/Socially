@@ -1,86 +1,114 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="/css/wall.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>
         <%= title %>
     </title>
     <%-include("../header.ejs")%>
-        </header>
 </head>
+
 <body>
-        <div class="main-page">
-            <section class="left-panel">
-                <div class="panel-options">
-                    <div class="post-tag">
-                        <a href="#"><i class="fas fa-sticky-note"><span> Posts</span></i></a>
-                    </div>
-                    <div class="photo-tag">
-                        <a href="wall/photos"><i class="fas fa-camera-retro"></i><span> Photos</span></a>
-                    </div>
-                    <div class="video-tag">
-                        <a href="#"><i class="fas fa-video"></i><span> Videos</span></a>
-                    </div>
-                    <!-- <div class="panel-options">
-                        
-                    </div> -->
+    <main class="main-page">
+        <section class="left-panel">
+            <div class="panel-options">
+                <div class="post-tag">
+                    <a href="#"><i class="fas fa-sticky-note"><span> Posts</span></i></a>
                 </div>
+                <div class="photo-tag">
+                    <a href="wall/photos"><i class="fas fa-camera-retro"></i><span> Photos</span></a>
+                </div>
+                <div class="video-tag">
+                    <a href="#"><i class="fas fa-video"></i><span> Videos</span></a>
+                </div>
+            </div>
         </section>
-        
-        <main class="main-wall">
-            <div class="new-post-main" id="new-post-main" style="display: none;">
-                <div class="new-post-container">
-                    <div class="new-post">
-                        <textarea name="post" id="" cols="30" rows="10" maxlength="180"></textarea>
-                    </div>
-                    <br>
-                    <button class="post-btn"><i class="far fa-plus-square"><span> Post</span></i></button>
+
+        <div class="main-wall">
+                <div class="new-post-container" id="new-post-container" style="display: none;">
+                    <form action="/create/post" method="post">
+                        <div class="new-post">
+                            <textarea name="post" id="" cols="30" rows="3" maxlength="300"
+                                placeholder="What's next...."></textarea>
+                        </div>
+                        <br>
+                        <div class="post-custom">
+                            <div class="new-post-icons">
+                                <i class="far fa-smile-beam"></i>
+                                <i class="material-icons">format_size</i>
+                                <i class="material-icons">format_italic</i>
+                                <i class="material-icons">format_color_text</i>
+                            </div>
+                            <div class="post-btn">
+                                <button type="submit"><span id="add-post-icon"
+                                        class="material-icons">post_add</span></button>
+                    </form>
                 </div>
             </div>
+        </div>
             <div class="float">
-                <button class="floating-btn" id="floating-btn"><i id="floating-btn-icon" class="fas fa-plus-circle"></i></button>
+                <button class="floating-btn" id="floating-btn"><i id="floating-btn-icon"
+                        class="fas fa-plus-circle"></i></button>
             </div>
-            <div class="posts-container">
-                <div class="post-avatar">
-                    <img src="/avatar/test.jpg" alt="post_avatar.jpg">
+        <div class="main-post-container">
+            <%for(let posts of post){%>
+                <div class="posts-main">
+                    <div class="posts-container">
+                        <div class="post-avatar">
+                            <img src="/avatar/test.jpg" alt="post_avatar.jpg">
+                        </div>
+                        <div class="name-post">
+                            <a href="/user/profile">
+                                <%=posts.user.firstname%>
+                                    <%=posts.user.lastname%>
+                            </a>
+                        </div>
+                        <div class="usermail">
+                            <p>
+                                <%=posts.user.email%>
+                            </p>
+                        </div>
+                        <div class="posts">
+                            <p>
+                                <%=posts.post%>
+                            </p>
+                        </div>
+                        <div class="post-options">
+                            <i class="far fa-hand-spock icon-hand"></i>
+                            <i class="far fa-comment"></i>
+                        </div>
+                        <%if(locals.user && locals.user.id == posts.user.id){%>
+                        <div class="delete-post">
+                            <a href="post/delete/<%=posts.id%>">
+                                <i id="post-del" class="far fa-times-circle"></i>
+                            </a>
+                        </div>
+                        <%}%>
+                    </div>
                 </div>
-                <div class="name-post">
-                    <a href="/user/profile"><%=name%></a>
-                </div>
-                <div class="usermail">
-                    <p><%=email%></p>
-                </div>
-                <div class="posts">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus deleniti, adipisci quos culpa debitis iure fugit rem inventore dolores, suscipit ducimus cupiditate voluptates temporibus sed facilis veritatis est placeat delectus.</p>
-                </div>
-                <div class="post-options">
-                    <i id="icon-hand" class="far fa-hand-spock"></i>
-                    <i class="far fa-comment"></i>
-                </div>
-                <div class="delete-post">
-                    <i id="post-del" class="far fa-times-circle"></i>
-                </div>
-                
-            </div>
-        </main>
-        <section class="panel">
+                <%}%>
+        </div>
+        <!-- <section class="panel">
             <div class="right-panel">
             </div>
-        </section>
-        </div>
-        <%-include("../footer.ejs")%> 
+        </section> -->
+    </main>
+    <%-include("../footer.ejs")%>
 </body>
-    <script src="/js/wall.js"></script>
-    <script>
-        const head = document.getElementById("head");
-	    const foot = document.getElementById("footer");
-        (function headFoot(){
+<script src="/js/wall.js"></script>
+<script>
+    const head = document.getElementById("head");
+    const foot = document.getElementById("footer");
+    (function headFoot() {
         foot.classList.add("footer");
-	    head.classList.add("header");  
-        return headFoot;  
-        }());
-    </script>
+        head.classList.add("header");
+        return headFoot;
+    }());
+</script>
+
 </html>
