@@ -14,6 +14,8 @@ router.get("/signup" , SignupController.view);
 router.post("/signup" , SignupController.signup);
 router.get("/signout", UserController.endSession);
 router.get("/user/wall",passport.checkAuthentication,WallPostsController.view);
+router.post("/create/post", WallPostsController.post);
+router.get("/user/post/delete/:id", passport.checkAuthentication, WallPostsController.delete);
 router.get("/user/wall/photos", WallPostsController.photos);
 //use passport authenticate
 router.post("/signin", passport.authenticate(
