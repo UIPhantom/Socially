@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/photos.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>
         <%= title %>
     </title>
@@ -13,14 +15,78 @@
 </head>
 <body>
     <div class="main">
-        <div class="photos">
-            <div class="share">
-                <span class="material-icons">trending_flat</span>
+        <div class="panel">
+            <section class="left-panel">
+                <div class="panel-options">
+                    <div class="post-tag">
+                        <a href="#"><i class="fas fa-sticky-note"><span> Posts</span></i></a>
+                    </div>
+                    <div class="photo-tag">
+                        <a href="wall/photos"><i class="fas fa-camera-retro"></i><span> Photos</span></a>
+                    </div>
+                    <div class="video-tag">
+                        <a href="#"><i class="fas fa-video"></i><span> Videos</span></a>
+                    </div>
+                    <!-- <div class="panel-options">
+                    
+                    </div> -->
+                </div>
+            </section>
+        </div>
+        <div class="photo_posts">
+            <div class="photos">
+                <div class="share">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                    <i class="fas fa-share-square"></i>
+                </div>
+                <div class="image">
+                    <img src="/images/biryani.jpg" alt="">
+                </div>
+                <div class="commentSection">
+                    <div class="likemojis">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="far fa-grin-hearts"></i></button>
+                        <div class="dropdown-content">
+                            <i class="far fa-kiss-wink-heart"></i>
+                            <i class="fas fa-fire"></i>
+                            <i class="fas fa-virus"></i>
+                            <i class="fas fa-sad-tear"></i>
+                            <i class="fas fa-sad-tear"></i>
+                            <i class="fas fa-grin-squint-tears"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <img src="/images/doggo.jpg" alt="">
-            <div class="commentSection">
-
+            <div class="photos">
+                <div class="share">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                    <i class="fas fa-share-square"></i>
+                </div>
+                <div class="image">
+                    <img src="/images/nature.jpg" alt="">
+                </div>
+                    <div class="commentSection">
+                    <div class="likemojis">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <div class="dropdown">
+                        <!--<button class="dropbtn"><i class="far fa-grin-hearts"></i></button>
+                        <div class="dropdown-content">
+                            <i class="far fa-kiss-wink-heart"></i>
+                            <i class="fas fa-fire"></i>
+                            <i class="fas fa-virus"></i>
+                            <i class="fas fa-sad-tear"></i>
+                            <i class="fas fa-sad-tear"></i>
+                            <i class="fas fa-grin-squint-tears"></i>
+                        </div>-->
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </div>
     <%-include("../footer.ejs")%>
@@ -33,5 +99,25 @@
     head.classList.add("header");  
     return headFoot;  
     }());
+    $(document).ready(function () {
+            $(".fa-heart").click(function () {
+                $(".fa-heart").css({
+                    color: "black"
+                });
+            });
+            $(".fa-heart-broken").click(function () {
+                $(".fa-heart-broken").css({
+                   color: "white" 
+                });
+            });
+            if (condition) {
+                
+            } else {
+                
+            }
+            $(".dropbtn").click(function () {
+                $(".dropdown-content").fadeToggle(slow);
+            });
+        });
 </script>
 </html>

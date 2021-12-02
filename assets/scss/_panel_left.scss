@@ -6,10 +6,10 @@ body{
 }
 .left-panel{
     display: flex;
-    position: relative;
+    position: absolute;
     width: 250px;
-    height: 950px;
-    margin-top: 60px;
+    height: 200%;
+    margin-top: 0.5px;
     background-color: aqua;
     opacity: 40%;
     .panel-options{
