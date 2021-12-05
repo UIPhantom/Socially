@@ -39,6 +39,7 @@
                     outline: none;
                     resize: none;
                     font-size: 20px;
+                    background:linear-gradient(50deg, lightgrey, rgb(135,201,240));
                 }
             }
 
@@ -105,8 +106,8 @@
         height:60px;
         width: 60px;
         border-radius: 50%;
-        border: 0px;
-        background-color: blue;
+        border: 3px solid rgb(130, 186, 238);
+        background:linear-gradient(0deg, lightgrey, rgb(135,201,240));
         &:hover{
             opacity: 70%;
             background-color: lightskyblue;
@@ -129,7 +130,6 @@
                 margin-top: 50px;
                 margin-left:30px;
                 .posts-container{
-            
                     box-shadow: 10px 10px 10px 10px slategray;
                     display: flex;
                     flex-direction: $row;

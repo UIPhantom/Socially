@@ -135,6 +135,7 @@ body {
   outline: none;
   resize: none;
   font-size: 20px;
+  background: linear-gradient(50deg, lightgrey, #87c9f0);
 }
 .main-wall .new-post-container .post-custom {
   display: flex;
@@ -186,8 +187,8 @@ body {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  border: 0px;
-  background-color: blue;
+  border: 3px solid #82baee;
+  background: linear-gradient(0deg, lightgrey, #87c9f0);
 }
 .main-wall .floating-btn:hover {
   opacity: 70%;
