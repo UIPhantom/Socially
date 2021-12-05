@@ -18,9 +18,48 @@ floatingButton.addEventListener("click", () => {
    });
 
 //Post Icons
-const iconHand = document.getElementsByClassName("icon-hand");
-let handIcon = false;
+
 window.onload = () => {
+   
+}
+
+
+//New post icons
+const addPost = document.getElementById("add-post-icon");
+
+addPost.addEventListener("mouseenter" , () => {
+   addPost.textContent = "send";
+});
+
+addPost.addEventListener("mouseleave" , () => {
+   addPost.textContent = "post_add";
+});
+
+//comments container
+$(document).ready(function () {
+   $(".comment-container").draggable();
+ });
+ const commentIcon = document.getElementsByClassName("comment-icon");
+ const commentBox = document.getElementsByClassName("comment-container");
+ const iconHand = document.getElementsByClassName("icon-hand");
+ let handIcon = false;
+ let boolComment = false;
+ window.onload = () =>{ 
+   for(let i=0; i<commentIcon.length; i++){
+      commentIcon[i].addEventListener("click", () => {
+         boolComment = !boolComment;
+         if(boolComment){
+            commentBox[i].style.display="block";
+            commentIcon[i].classList.remove("far");
+            commentIcon[i].classList.add("fas");
+         }
+         else{
+            commentBox[i].style.display="none";
+            commentIcon[i].classList.remove("fas");
+            commentIcon[i].classList.add("far");
+         }
+      });
+   }
    for(let i=0; i<iconHand.length; i++){
       iconHand[i].addEventListener("click", () => {
          handIcon = !handIcon;
@@ -40,18 +79,6 @@ window.onload = () => {
          iconHand[i].style.color = "blueviolet";
       });
    }
-}
-
-
-//New post icons
-const addPost = document.getElementById("add-post-icon");
-
-addPost.addEventListener("mouseenter" , () => {
-   addPost.textContent = "send";
-});
-
-addPost.addEventListener("mouseleave" , () => {
-   addPost.textContent = "post_add";
-});
+ }
 
 

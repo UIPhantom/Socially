@@ -30,7 +30,7 @@
         </section>
 
         <div class="main-wall">
-                <div class="new-post-container" id="new-post-container" style="display: none;">
+                <div class="new-post-container" id="new-post-container" style="display: none;" >
                     <form action="/create/post" method="post">
                         <div class="new-post">
                             <textarea name="post" id="" cols="30" rows="3" maxlength="300"
@@ -80,7 +80,30 @@
                         </div>
                         <div class="post-options">
                             <i class="far fa-hand-spock icon-hand"></i>
-                            <i class="far fa-comment"></i>
+                            <span>count</span>
+                            <i class="far fa-comment comment-icon"></i>
+                            <span>count</span>
+                        </div>
+                            <div class="comment-container" style="display: none;" >
+                                <form action="/create/post" method="post">
+                                    <div class="new-comment">
+                                        <textarea name="comment" id="" cols="30" rows="3"
+                                            placeholder="What's next...."></textarea>
+                                    </div>
+                                    <br>
+                                    <div class="comment-custom" style="cursor: move;">
+                                        <div class="comment-icons">
+                                            <i class="far fa-smile-beam" style="cursor:pointer;"></i>
+                                            <i class="material-icons" style="cursor:pointer;">format_size</i>
+                                            <i class="material-icons" style="cursor:pointer;">format_italic</i>
+                                            <i class="material-icons" style="cursor:pointer;">format_color_text</i>
+                                        </div>
+                                        <div class="comment-btn">
+                                            <button type="submit" style="cursor:pointer;"><span id="add-post-icon"
+                                                    class="material-icons">send</span></button>
+                                </form>
+                            </div>
+                        </div>
                         </div>
                         <%if(locals.user && locals.user.id == posts.user.id){%>
                         <div class="delete-post">
@@ -100,6 +123,8 @@
     </main>
     <%-include("../footer.ejs")%>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
 <script src="/js/wall.js"></script>
 <script>
     const head = document.getElementById("head");

@@ -27,7 +27,7 @@ body {
   position: relative;
   width: 250px;
   height: inherit;
-  margin-top: 60px;
+  margin-top: 62px;
   background-color: aqua;
   opacity: 40%;
 }
@@ -110,23 +110,26 @@ body {
   width: 90%;
   margin-top: 5px;
   margin-left: 100px;
+  border: 1px solid black;
 }
 .main-wall .new-post-container form {
   height: 100%;
+  width: 100%;
+  border: 1px solid black;
 }
 .main-wall .new-post-container form .new-post {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #dfc2fa;
-  height: 70%;
-  width: 52.5vw;
+  height: 80%;
+  width: inherit;
 }
 .main-wall .new-post-container form .new-post textarea {
   font-family: "Architects Daughter", cursive;
   font-weight: 900;
   height: 98.4%;
-  width: 99.8%;
+  width: inherit;
   border: 0px;
   box-sizing: border-box;
   outline: none;
@@ -137,7 +140,7 @@ body {
   display: flex;
   margin-top: -18px;
   height: 50px;
-  width: 52.7vw;
+  width: inherit;
   background-color: #eee1fa;
 }
 .main-wall .new-post-container .post-custom .new-post-icons {
@@ -184,10 +187,10 @@ body {
   width: 60px;
   border-radius: 50%;
   border: 0px;
-  background-color: aquamarine;
+  background-color: blue;
 }
 .main-wall .floating-btn:hover {
-  opacity: 60%;
+  opacity: 70%;
   background-color: lightskyblue;
 }
 .main-wall .main-post-container {
@@ -282,10 +285,11 @@ body {
 .main-wall .main-post-container .posts-main .posts-container .delete-post:hover i {
   transition: all ease-in-out 0.5s;
   color: red;
+  cursor: default;
 }
 .main-wall .main-post-container .posts-main .posts-container .delete-post i {
   font-size: 30px;
-  color: green;
+  color: brown;
 }
 .main-wall .main-post-container .posts-main .posts-container .post-options {
   display: flex;
@@ -293,13 +297,88 @@ body {
   position: absolute;
   height: 130px;
   width: 110px;
-  margin-top: 100px;
+  margin-top: 70px;
   margin-left: 230px;
   text-align: center;
 }
 .main-wall .main-post-container .posts-main .posts-container .post-options i {
   margin: 10px;
   font-size: 50px;
+  color: blueviolet;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 15vh;
+  width: 40%;
+  margin-top: 180px;
+  margin-left: 100px;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container form {
+  height: 100%;
+  width: 100%;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container form .new-comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: inherit;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container form .new-comment textarea {
+  background: linear-gradient(50deg, lightgrey, #87c9f0);
+  border-radius: 10px;
+  z-index: 1;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 900;
+  height: 98.4%;
+  width: inherit;
+  border: 0px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  outline: none;
+  resize: none;
+  font-size: 20px;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container .comment-custom {
+  display: flex;
+  margin-top: -18px;
+  height: 50px;
+  width: inherit;
+  background-color: #eee1fa;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container .comment-custom .comment-icons {
+  display: flex;
+  width: 50%;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container .comment-custom .comment-icons i {
+  font-size: 30px;
+  margin: 10px 10px 10px 5px;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container .comment-custom .comment-icons i:hover {
+  color: blueviolet;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container .comment-custom .comment-btn {
+  margin-left: 37%;
+  width: 10%;
+  height: 50px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container .comment-custom .comment-btn button {
+  background-color: transparent;
+  border: 0px;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container .comment-custom .comment-btn button span {
+  margin-top: 5px;
+  font-size: 40px;
+  color: #000;
+}
+.main-wall .main-post-container .posts-main .posts-container .comment-container .comment-custom .comment-btn button span:hover {
+  transition: all 0.4s;
   color: blueviolet;
 }
 
