@@ -6,7 +6,7 @@
   align-items: flex-end;
   height: 4rem;
   width: 100%;
-  background-color: aqua;
+  background: linear-gradient(50deg, lightgrey, #87c9f0);
 }
 .header .site-logo {
   height: 64px;

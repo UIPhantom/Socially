@@ -10,7 +10,7 @@ body{
     width: 250px;
     height: inherit;
     margin-top: 62px;
-    background-color: aqua;
+    background:linear-gradient(50deg, lightgrey, rgb(135,201,240));
     opacity: 40%;
     .panel-options{
         @include flex-center($column);
@@ -18,7 +18,7 @@ body{
         margin-top: 100px;
         height: 100px;
         width: inherit;
-        background-color: aquamarine;
+        background:linear-gradient(50deg, lightgrey, rgb(135,201,240));
         font-size: 20px;
         a{
             text-decoration: none;

@@ -28,7 +28,7 @@ body {
   width: 250px;
   height: inherit;
   margin-top: 62px;
-  background-color: aqua;
+  background: linear-gradient(50deg, lightgrey, #87c9f0);
   opacity: 40%;
 }
 .left-panel .panel-options {
@@ -39,7 +39,7 @@ body {
   margin-top: 100px;
   height: 100px;
   width: inherit;
-  background-color: aquamarine;
+  background: linear-gradient(50deg, lightgrey, #87c9f0);
   font-size: 20px;
 }
 .left-panel .panel-options a {
